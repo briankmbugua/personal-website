@@ -30,6 +30,14 @@ body,html{
         color: white;
     }
 }
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Styles */
+    .nav{
+        &__links{
+            display: none;
+        }
+    }
+}
 
 .main{
     display: flex;
