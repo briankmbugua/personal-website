@@ -1,0 +1,5 @@
+background -- #0b0c10
+#1f2833
+#c5c6c7
+#66fcf1
+#45a29e
