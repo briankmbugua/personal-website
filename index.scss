@@ -6,49 +6,9 @@
     font-size: 16px;
 }
 
-// .nav {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-around;
-//     background: #0b0c10;
-//     color: #66fcf1;
-//     width: auto;
-//     height: 4em;
-//     margin: 0;
-//     box-sizing: border-box;
-//     box-shadow: 2px 2px 4px black;
-//     &__links{
-//         border: none;
-//         outline: none;
-//         background: #66fcf1;
-//         color: #0b0c10;
-//         padding: 0 .5em 0 .5em;
-//         text-decoration: none;
-//         display: block;
-//     }
-
-//     &__links:hover{
-//         background: black;
-//         color: white;
-//     }
-// }
-// @media  screen and (max-width: 500px) {
-//     /* Styles */
-//     .nav{
-//         flex-direction: column;
-//         display: none;
-//         width: 100%;
-//         height: auto;
-//         padding: 1rem;
-//         border: 2px solid yellow;
-//         &__links{
-//             width: 90%;
-//             text-align: center;
-//             margin-bottom: 0.5rem;
-//             border-radius: 5px;
-//         }
-//     }
-// }
+a{
+    text-decoration: none;
+}
 
 .header{
     display: flex;
