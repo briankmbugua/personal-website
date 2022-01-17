@@ -3,3 +3,17 @@ background -- #0b0c10
 text -- #c5c6c7
 #66fcf1
 #45a29e
+
+
+        &__header{
+            border: 2px solid white;
+            align-self: flex-start;
+            justify-self: center;
+        }
+
+                &__skill{
+            border: 2px solid white;
+            width: 10rem;
+            margin: 1rem;
+            height: 20rem;
+        }

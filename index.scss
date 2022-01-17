@@ -1,8 +1,9 @@
-body,html{
+*,body,html{
     box-sizing: border-box;
     margin: 0;
     background: #0b0c10;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
 }
 .nav {
     display: flex;
@@ -30,11 +31,20 @@ body,html{
         color: white;
     }
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media  screen and (max-width: 500px) {
     /* Styles */
     .nav{
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        border: 2px solid yellow;
         &__links{
-            display: none;
+            width: 90%;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            border-radius: 5px;
         }
     }
 }
@@ -43,20 +53,23 @@ body,html{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 4em);
+    flex-direction: column;
+    height: auto;
     text-align: center;
+    padding-top: 1rem;
+    background: chartreuse;
 
     &__intro {
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        width: 900px;
-        height: 500px;
+        width: 70vw;
+        height: auto;
 
         &__image{
-            width: 200px;
-            height: 200px;
+            width: 15rem;
+            height: 15rem;
             border: 2px solid black;
             border-radius: 50%;
             background: #66fcf1;
@@ -64,7 +77,7 @@ body,html{
         &__heading{
             color: #66fcf1;
             font-weight: 900;
-            font-size: 70px;
+            font-size: 60px;
 
         }
         &__description{
@@ -72,5 +85,64 @@ body,html{
             font-size: 20px;
             margin-top: 0;
         }
+    }
+
+    &__skills{
+        border: 2px solid red;
+        display: block;
+        width: 98%;
+        padding: 0.2rem;
+        margin: 1rem auto;
+
+        &__header{
+            border: 2px solid red;
+            padding: 0.2rem;
+            width: 15rem;
+            margin: 0.5rem auto;
+        }
+        &__container {
+            border: 2px solid white;
+            width: 99%;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            &__skill{
+                border: 2px solid green;
+                flex-basis: 12rem;
+                height: 15rem;
+                margin: 0.6rem auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+                &__header{
+                    width: 100%;
+                    height: 5rem;
+                    padding: 1rem;
+                    border: 2px solid yellow;
+                }
+
+                &__content{
+                    width: 12rem;
+                    height: 10rem;
+                    padding: 1rem;
+                    margin: 0.2rem;
+                    border: 2px solid orange;
+                }
+            }
+        }
+    }
+
+
+}
+@media screen and (max-width: 520px) {
+    .main__intro{
+        width: 100%;
+        padding: 0 0.6rem 0 0.6rem;
+    }
+    .main__intro__heading {
+        font-size: 30px;
     }
 }
