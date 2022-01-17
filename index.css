@@ -27,7 +27,6 @@ a {
 }
 
 .header__nav {
-  background: red;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   height: 100%;
@@ -43,7 +42,6 @@ a {
 }
 
 .header__nav__link {
-  background: green;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   margin-right: 2rem;
@@ -86,6 +84,7 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
     height: 2rem;
+    width: 100%;
   }
   .header__nav {
     display: -webkit-box;
@@ -114,6 +113,7 @@ a {
     background: cornflowerblue;
     width: 100%;
     text-align: center;
+    margin: 0 auto;
     margin-bottom: .5rem;
   }
   .header .menu {
