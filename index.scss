@@ -65,23 +65,24 @@ a{
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             position: absolute;
             margin: 0 auto;
-            top: 2rem;
+            top: 0;
             bottom: 0;
             width: 100%;
             height: auto;
             right: 100%;
             transition: 0.3s;
+            opacity: 0.9;
 
             &__link{
                 background: cornflowerblue;
                 width: 40%;
                 text-align: center;
                 margin: 0 auto;
-                margin-top: 0;
-                margin-bottom: 5rem;
+                margin-top: 0.5rem;
+                margin-bottom: 1rem;
             }
         }
 
