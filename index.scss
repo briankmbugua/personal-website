@@ -69,6 +69,7 @@ a{
             position: absolute;
             margin: 0 auto;
             top: 2rem;
+            bottom: 0;
             width: 100%;
             height: auto;
             right: 100%;
@@ -76,10 +77,11 @@ a{
 
             &__link{
                 background: cornflowerblue;
-                width: 100%;
+                width: 40%;
                 text-align: center;
                 margin: 0 auto;
-                margin-bottom: .5rem;
+                margin-top: 0;
+                margin-bottom: 5rem;
             }
         }
 
@@ -88,7 +90,7 @@ a{
         }
 
         .open{
-            right: 0%;
+            right: 0;
         }
     }
 }
