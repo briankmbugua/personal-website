@@ -4,6 +4,7 @@
     background: #0b0c10;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 a{
@@ -17,6 +18,8 @@ a{
     justify-content: space-between;
     height: 100%;
     margin: 0 auto;
+    position: sticky;
+    top: 0;
     &__nav{
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
@@ -24,6 +27,10 @@ a{
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &__close{
+            display: none;
+        }
 
         &__link{
             margin-top: 0.5rem;
@@ -75,6 +82,19 @@ a{
             right: 100%;
             transition: 0.3s;
             opacity: 0.9;
+
+            &__close{
+                display: block;
+                outline: none;
+                border: none;
+                border-radius: 2px;
+                cursor: pointer;
+                margin-top: 0.5rem;
+                &:hover{
+                    color: white;
+                }
+
+            }
 
             &__link{
                 background: cornflowerblue;

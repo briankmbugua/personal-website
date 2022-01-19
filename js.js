@@ -1,22 +1,21 @@
-
-
-let btn = document.querySelector(".menu");
-btn.addEventListener("click",open)
-
-function open(){
-
-    let nav = document.querySelector(".header__nav")
+//function to toggle the open class in the nav
+function toggleMenu() {
+    let nav = document.querySelector(".header__nav");
     nav.classList.toggle("open");
 }
-//selecting the anchor tags using their class name
-let navLink = document.querySelectorAll(".header__nav__link");
 
-//adding an event listener to each anchor tag
+//linking the toggleMenu function with menu button
+let btn = document.querySelector(".menu");
+btn.addEventListener("click",toggleMenu)
+
+
+//linking the toggleMenu function with each link in the menu to close it
+//when clicked
+let navLink = document.querySelectorAll(".header__nav__link");
 navLink.forEach(item => {
-    item.addEventListener("click", myFunctionTwo);
+    item.addEventListener("click", toggleMenu);
 })
 
-function myFunctionTwo() {
-    let nav = document.querySelector(".header__nav")
-    nav.classList.toggle("open")
-}
+let closeBtn = document.querySelector(".header__nav__close")
+
+closeBtn.addEventListener("click",toggleMenu)
