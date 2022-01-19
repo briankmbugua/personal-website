@@ -148,6 +148,7 @@ a {
   .header .open {
     right: 0;
     position: fixed;
+    height: 100vh;
   }
 }
 
@@ -185,8 +186,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 70vw;
-  height: auto;
+  width: 90vw;
+  height: 100vh;
 }
 
 .main__intro__image {
@@ -282,5 +283,9 @@ a {
   .main__intro__heading {
     font-size: 30px;
   }
+}
+
+.lock-scroll {
+  overflow: hidden;
 }
 /*# sourceMappingURL=index.css.map */

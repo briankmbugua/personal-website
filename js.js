@@ -1,7 +1,12 @@
 //function to toggle the open class in the nav
+
+function lockScroll() {
+    document.body.classList.toggle("lock-scroll");
+}
 function toggleMenu() {
     let nav = document.querySelector(".header__nav");
     nav.classList.toggle("open");
+    lockScroll();
 }
 
 //linking the toggleMenu function with menu button

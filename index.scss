@@ -114,6 +114,7 @@ a{
         .open{
             right: 0;
             position: fixed;
+            height: 100vh;
         }
     }
 }
@@ -134,8 +135,8 @@ a{
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        width: 70vw;
-        height: auto;
+        width: 90vw;
+        height: 100vh;
 
         &__image{
             width: 15rem;
@@ -215,4 +216,8 @@ a{
     .main__intro__heading {
         font-size: 30px;
     }
+}
+
+.lock-scroll{
+    overflow: hidden;
 }
