@@ -109,11 +109,11 @@ a{
 
         .menu{
             display: flex;
-            position: fixed;
         }
 
         .open{
             right: 0;
+            position: fixed;
         }
     }
 }
