@@ -144,6 +144,7 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: fixed;
   }
   .header .open {
     right: 0;
