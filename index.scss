@@ -50,6 +50,7 @@ a{
         justify-content: center;
         align-items: center;
         height: auto;
+        touch-action: none;
         &__bars{
             width: 30px;
             height: 6px;

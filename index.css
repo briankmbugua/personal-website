@@ -73,6 +73,8 @@ a {
       -ms-flex-align: center;
           align-items: center;
   height: auto;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 
 .header .menu__bars {
