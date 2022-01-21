@@ -5,8 +5,11 @@ function lockScroll() {
 }
 function toggleMenu() {
     let nav = document.querySelector(".header__nav");
-    nav.classList.toggle("open");
-    lockScroll();
+    let innerWidth = window.innerWidth;
+    if(innerWidth<=500){
+        nav.classList.toggle("open");
+        lockScroll();   
+    }
 }
 
 //linking the toggleMenu function with menu button
