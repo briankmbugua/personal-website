@@ -154,6 +154,7 @@ a{
     text-align: center;
     padding-top: 1rem;
     background: chartreuse;
+    margin-bottom: 0.6rem;
 
     &__intro {
         display: flex;
@@ -252,7 +253,7 @@ a{
     border: 2px solid green;
     height: auto;
     background: yellow;
-    margin: 1rem auto 0 auto;
+    margin: 1rem auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,5 +289,17 @@ a{
     .copyright{
         font-size: 0.5rem;
         margin: 0.8rem;
+        text-align: center;
     }
+}
+
+@media screen and (max-width: 520px) {
+    .footer{
+        width: 90vw;
+        margin: 0 auto;
+    }
+    .footer__header__heading{
+        font-size: 1rem;
+    }
+
 }
