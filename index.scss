@@ -144,31 +144,67 @@ a{
     background: chartreuse;
     margin-bottom: 0.6rem;
 
-    &__intro {
+    &__hero {
         display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        width: 95vw;
-        height: 100vh;
+        flex-direction: row;
+        background: white;
+        width: 98vw;
+        height: 100%;
+        flex-wrap: wrap;
 
         &__image{
-            width: 15rem;
-            height: 15rem;
-            border: 2px solid black;
-            border-radius: 50%;
-            background: #66fcf1;
-        }
-        &__heading{
-            color: #66fcf1;
-            font-weight: 900;
-            font-size: 60px;
+            flex-basis: 40rem;
+            border: 2px solid red;
+            height: 30rem;
+            margin: 2rem auto;
+
+            &__container{
+                width: 25rem;
+                height: 20rem;
+                border-radius: 10px;
+                border: 2px solid black;
+                margin: 2rem auto;
+
+            }
+
+            &__links {
+                border: 2px solid yellow;
+                margin: 1rem;
+                background: red;
+
+                &__button{
+                    margin: 1rem;
+                    width: 12rem;
+                }
+            }
 
         }
-        &__description{
-            color: #c5c6c7;
-            font-size: 20px;
-            margin-top: 0;
+        &__message{
+            flex-basis: 40rem;
+            border: 2px solid black;
+            height: 30rem;
+            font-size: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 2rem auto;
+
+            h1{
+                color: red;
+                font-size: 4rem;
+                margin: 1rem;
+                span{
+                    color: green;
+                    font-size: 4rem;
+                    font-weight: 100;
+                }
+            }
+            p{
+                text-align: left;
+                margin: 1rem;
+                line-height: 2.5rem;
+            }
         }
     }
 
@@ -290,4 +326,34 @@ a{
         font-size: 1rem;
     }
 
+}
+
+@media screen and (max-width: 1300px) {
+    .main__hero{
+        background: 90vw;
+        &__image{
+            flex-basis: 20rem;
+            height: auto;
+            &__container{
+                width: 15rem;
+                margin: 1.2rem auto;
+            }
+            &__links{
+                margin: 0.3rem;
+            }
+        }
+        &__message{
+            flex-basis: 20rem;
+            height: auto;
+            h1{
+                font-size: 2rem;
+                span{
+                    color: green;
+                    font-size: 2rem;
+                    font-weight: 100;
+                }
+            }
+            
+        }
+    }
 }
