@@ -11,10 +11,13 @@
 a{
     text-decoration: none;
 }
-
-.header{
+@mixin flex{
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+.header{
+    @include flex;
     justify-content: space-between;
     height: 100%;
     margin: 0 auto;
@@ -35,9 +38,7 @@ a{
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex;
 
         &__close{
             display: none;
@@ -70,7 +71,7 @@ a{
 
 @media screen and(max-width: 500px) {
     .header{
-        background: green;
+        background: rgb(30, 129, 116);
         display: flex;
         justify-content: space-between;
         height: 3rem;
@@ -143,7 +144,7 @@ a{
     height: auto;
     text-align: center;
     padding-top: 1rem;
-    background: chartreuse;
+    background: rgb(30, 110, 110);
     margin-bottom: 0.6rem;
 
     &__hero {

@@ -19,6 +19,9 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -49,12 +52,12 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header__nav__close {
@@ -86,7 +89,7 @@ a {
 
 @media screen and (max-width: 500px) {
   .header {
-    background: green;
+    background: #1e8174;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -174,7 +177,7 @@ a {
   height: auto;
   text-align: center;
   padding-top: 1rem;
-  background: chartreuse;
+  background: #1e6e6e;
   margin-bottom: 0.6rem;
 }
 
