@@ -201,7 +201,7 @@ a {
 .main__hero__image__container {
   width: 25rem;
   height: 20rem;
-  border-radius: 10px;
+  border-radius: 30px;
   border: 2px solid black;
   margin: 2rem auto;
 }
