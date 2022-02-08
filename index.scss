@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,700;1,600&display=swap');
 
-*,body,html{
+*,
+body,
+html {
     box-sizing: border-box;
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -8,49 +10,56 @@
     scroll-behavior: smooth;
 }
 
-a{
+a {
     text-decoration: none;
 }
-@mixin flex{
+
+@mixin flex($align, $justify, $direction) {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
 }
-.header{
-    @include flex;
-    justify-content: space-between;
-    height: 100%;
+
+@mixin box($height,$width,$position,$background) {
+    height: $height;
+    width: $width;
+    position: $position;
+    background: $background;
+}
+
+.header {
+    @include flex(center, space-between, row);
+    @include box(100%,null,sticky,white);
     margin: 0 auto;
-    position: sticky;
     top: 0;
-    background: white;
     box-shadow: 2px 2px 60px 10px rgba(0, 0, 0, 0.712);
 
-    &__logo{
+    &__logo {
         margin-left: 3rem;
         padding: 1rem;
-        h2{
+
+        h2 {
             font-size: 2rem;
             color: black;
         }
     }
-    &__nav{
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-        height: 100%;
-        @include flex;
 
-        &__close{
+    &__nav {
+        margin: 0.5rem 0 0.5rem 0;
+        height: 100%;
+        @include flex(center, center, null);
+
+        &__close {
             display: none;
         }
 
-        &__link{
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-            margin-right: 2rem;
+        &__link {
+            margin: 0.5rem 2rem 0.5rem 0;
             padding: 0.2rem;
             transition: 2s all ease;
-            &:hover{
+
+            &:hover {
                 background: rgb(180, 180, 120);
                 text-decoration: underline;
             }
@@ -58,76 +67,67 @@ a{
 
     }
 
-    .menu{
-        .fas{
+    .menu {
+        .fas {
             font-size: 2rem;
             display: none;
+        }
+
+        display: none;
     }
-           display: none;
-     }
 }
 
 //navbar media query
 
 @media screen and(max-width: 500px) {
-    .header{
-        background: rgb(30, 129, 116);
-        display: flex;
-        justify-content: space-between;
-        height: 3rem;
-        width: 100%;
+    .header {
+        @include flex(null, space-between, null);
+        @include box(3rem,100%,null,null);
 
-        &__logo{
+        &__logo {
             margin-left: 0.5rem;
         }
 
-        &__nav{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            position: fixed;
+        &__nav {
+            @include flex(center, space-between, column);
+            @include box(auto,100%,fixed,black);
             margin: 0 auto;
             top: 0;
             bottom: 0;
-            width: 100%;
-            height: auto;
             right: 100%;
             transition: 0.3s;
-            background-color: black;
 
-            &__close{
+            &__close {
                 display: block;
                 outline: none;
                 border: 2px solid rgb(126, 59, 59);
                 border-radius: 2px;
                 cursor: pointer;
                 margin-top: 0.5rem;
-                &:hover{
+
+                &:hover {
                     color: white;
                 }
 
             }
 
-            &__link{
-                background: cornflowerblue;
-                width: 40%;
+            &__link {
+                @include box(null,40%,null,cornflowerblue);
                 text-align: center;
-                margin: 0 auto;
-                margin-top: 0.5rem;
-                margin-bottom: 1rem;
+                margin: 0.5rem auto 1rem auto;
             }
         }
 
-        .menu{
+        .menu {
             margin-right: 1rem;
             display: block;
-            .fas{
+
+            .fas {
                 display: block;
             }
         }
 
-        .open{
+        .open {
             right: 0;
             position: fixed;
             height: 100vh;
@@ -136,33 +136,23 @@ a{
 }
 
 
-.main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: auto;
+.main {
+    @include flex(center, center, column);
+    @include box(auto,null,null,rgb(30,110,110));
     text-align: center;
     padding-top: 1rem;
-    background: rgb(30, 110, 110);
     margin-bottom: 0.6rem;
 
     &__hero {
-        display: flex;
-        flex-direction: row;
-        background: white;
-        width: 98vw;
-        height: 100%;
-
-        &__image{
-            width: 30rem;
+        @include flex(null, null, row);
+        @include box(100%,98vw,null,white);
+        &__image {
+            @include box(auto,30rem,null,null);
             border: 2px solid red;
-            height: auto;
             margin: 2rem auto;
 
-            &__container{
-                width: 25rem;
-                height: 20rem;
+            &__container {
+                @include box(20rem,25rem,null,null);
                 border-radius: 30px;
                 border: 2px solid black;
                 margin: 2rem auto;
@@ -174,35 +164,34 @@ a{
                 margin: 1rem;
                 background: red;
 
-                &__button{
+                &__button {
                     margin: 1rem;
                     width: 12rem;
                 }
             }
 
         }
-        &__message{
-            width: 30rem;
+
+        &__message {
+            @include box(auto,30rem,null,null);
             border: 2px solid black;
-            height: auto;
             font-size: 4rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            @include flex(center, center, column);
             margin: 2rem auto;
 
-            h1{
+            h1 {
                 color: red;
                 font-size: 4rem;
                 margin: 1rem;
-                span{
+
+                span {
                     color: green;
                     font-size: 4rem;
                     font-weight: 100;
                 }
             }
-            p{
+
+            p {
                 text-align: left;
                 margin: 1rem;
                 line-height: 2.5rem;
@@ -210,46 +199,42 @@ a{
         }
     }
 
-    &__skills{
+    &__skills {
         border: 2px solid red;
         display: block;
         width: 98%;
         padding: 0.2rem;
         margin: 1rem auto;
 
-        &__header{
+        &__header {
             border: 2px solid red;
             padding: 0.2rem;
             width: 15rem;
             margin: 0.5rem auto;
         }
+
         &__container {
             border: 2px solid white;
             width: 99%;
-            display: flex;
-            align-items: center;
+            @include flex(center, null, null);
             flex-wrap: wrap;
             margin: 0 auto;
-            &__skill{
+
+            &__skill {
                 border: 2px solid green;
                 flex-basis: 12rem;
                 height: 15rem;
                 margin: 0.6rem auto;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
+                @include flex(center, space-between, column);
 
-                &__header{
-                    width: 100%;
-                    height: 5rem;
+                &__header {
+                    @include box(5rem,100%,null,null);
                     padding: 1rem;
                     border: 2px solid yellow;
                 }
 
-                &__content{
-                    width: 12rem;
-                    height: 10rem;
+                &__content {
+                    @include box(10rem,12rem,null,null);
                     padding: 1rem;
                     margin: 0.2rem;
                     border: 2px solid orange;
@@ -264,82 +249,79 @@ a{
 //main media query
 
 @media screen and (max-width: 520px) {
-    .main__intro{
+    .main__intro {
         width: 100%;
         padding: 0 0.6rem 0 0.6rem;
     }
+
     .main__intro__heading {
         font-size: 30px;
     }
 }
 
-.lock-scroll{
+.lock-scroll {
     overflow: hidden;
 }
 
-.footer{
-    width: 95vw;
+.footer {
+    @include box(auto,95vw,null,yellow);
     border: 2px solid green;
-    height: auto;
-    background: yellow;
     margin: 1rem auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    @include flex(center, center, column);
     padding: 1rem;
 
-    &__header{
-        width: 70vw;
-        background: cyan;
+    &__header {
+        @include box(null,70vw,null,cyan);
         border: 2px solid white;
         text-align: center;
         padding: 0.5rem;
         margin-bottom: 1rem;
 
-        &__heading{
+        &__heading {
             font-size: 3rem;
         }
     }
 
-    &__form{
+    &__form {
         border: 2px solid black;
         background: red;
-            &__input{
-                width: 100%;
-            }
-            &__textarea{
-                width: 100%;
-            }
+
+        &__input {
+            width: 100%;
+        }
+
+        &__textarea {
+            width: 100%;
+        }
     }
 
-    &__links{
+    &__links {
         width: 70vw;
         padding: 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(center, center, null);
 
-        &__link{
+        &__link {
             border: 2px solid green;
             margin: 1rem;
         }
     }
 
-    .copyright{
+    .copyright {
         font-size: 0.5rem;
         margin: 0.8rem;
         text-align: center;
     }
 }
+
 //footet media query
 
 @media screen and (max-width: 520px) {
-    .footer{
+    .footer {
         width: 90vw;
         margin: 0 auto;
     }
-    .footer__header__heading{
+
+    .footer__header__heading {
         font-size: 1rem;
     }
 
@@ -347,36 +329,43 @@ a{
 
 // hero media queries
 
-@media  (min-width: 0px) and (max-width: 998px) {
-    .main__hero{
+@media (min-width: 0px) and (max-width: 998px) {
+    .main__hero {
         background: orange;
         flex-direction: column;
-        &__image{
+
+        &__image {
             width: 90%;
             height: auto;
-            &__container{
+
+            &__container {
                 width: 90%;
                 margin: 1.2rem auto;
             }
-            &__links{
+
+            &__links {
                 margin: 0.3rem;
             }
         }
-        &__message{
+
+        &__message {
             width: 90%;
             height: auto;
-            h1{
+
+            h1 {
                 font-size: 2rem;
-                span{
+
+                span {
                     color: green;
                     font-size: 2rem;
                     font-weight: 100;
                 }
             }
-            p{
+
+            p {
                 text-align: center;
             }
-            
+
         }
     }
 }
