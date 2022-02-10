@@ -36,10 +36,11 @@ a {
     margin: 0 auto;
     top: 0;
     box-shadow: 2px 2px 60px 10px rgba(0, 0, 0, 0.712);
+    height: 5rem;
 
     &__logo {
         margin-left: 3rem;
-        padding: 1rem;
+        padding: 0.8rem;
 
         h2 {
             font-size: 2rem;
@@ -85,6 +86,7 @@ a {
     .header {
         @include flex(null, space-between, null);
         @include box(3rem,100%,null,null);
+        height: 5rem;
 
         &__logo {
             margin-left: 0.5rem;
@@ -92,7 +94,7 @@ a {
 
         &__nav {
             @include flex(center, space-between, column);
-            @include box(auto,100%,fixed,black);
+            @include box(auto,100%,fixed,#0b0c10);
             margin: 0 auto;
             top: 0;
             bottom: 0;
