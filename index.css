@@ -129,7 +129,6 @@ a {
   .header__nav__close {
     display: block;
     outline: none;
-    border: 2px solid #7e3b3b;
     border-radius: 2px;
     cursor: pointer;
     margin-top: 0.5rem;
@@ -209,7 +208,7 @@ a {
 .main__hero__image__links {
   border: 2px solid yellow;
   margin: 1rem;
-  background: red;
+  background: #09423f;
 }
 
 .main__hero__image__links__button {
@@ -257,7 +256,6 @@ a {
 }
 
 .main__skills {
-  border: 2px solid red;
   display: block;
   width: 98%;
   padding: 0.2rem;
@@ -265,7 +263,6 @@ a {
 }
 
 .main__skills__header {
-  border: 2px solid red;
   padding: 0.2rem;
   width: 15rem;
   margin: 0.5rem auto;
@@ -339,7 +336,6 @@ a {
   height: auto;
   width: 95vw;
   background: yellow;
-  border: 2px solid green;
   margin: 1rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -398,7 +394,6 @@ a {
 }
 
 .footer__links__link {
-  border: 2px solid green;
   margin: 1rem;
 }
 

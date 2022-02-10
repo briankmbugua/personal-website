@@ -100,7 +100,6 @@ a {
             &__close {
                 display: block;
                 outline: none;
-                border: 2px solid rgb(126, 59, 59);
                 border-radius: 2px;
                 cursor: pointer;
                 margin-top: 0.5rem;
@@ -162,7 +161,7 @@ a {
             &__links {
                 border: 2px solid yellow;
                 margin: 1rem;
-                background: red;
+                background: rgb(9, 66, 63);
 
                 &__button {
                     margin: 1rem;
@@ -200,14 +199,12 @@ a {
     }
 
     &__skills {
-        border: 2px solid red;
         display: block;
         width: 98%;
         padding: 0.2rem;
         margin: 1rem auto;
 
         &__header {
-            border: 2px solid red;
             padding: 0.2rem;
             width: 15rem;
             margin: 0.5rem auto;
@@ -265,7 +262,6 @@ a {
 
 .footer {
     @include box(auto,95vw,null,yellow);
-    border: 2px solid green;
     margin: 1rem auto;
     @include flex(center, center, column);
     padding: 1rem;
@@ -301,7 +297,6 @@ a {
         @include flex(center, center, null);
 
         &__link {
-            border: 2px solid green;
             margin: 1rem;
         }
     }
